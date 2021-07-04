@@ -8,7 +8,7 @@ const App = () => {
   const [input, setInput] = useState("");
     return (
         <center>
-            <h1>Welcome to PhotoApp</h1>
+            <h1>Photo Search Application</h1>
             <SearchBox input={input} setInput={setInput}/>
             <Gallery query={input}/>
         </center>

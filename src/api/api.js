@@ -1,9 +1,14 @@
 const baseURL = "https://api.unsplash.com/";
-const API_KEY = process.env.API_KEY;
+require('dotenv').config();
+//const API_KEY = process.env.REACT_APP_API_KEY;
+const API_KEY='GxPFgWfSfm8eXIa7Unch_LVACHygI8bi-TsgC0sR41Y'
+
 
 export const getTrendingImages = async () => {
+  
   try {
-    const res = await fetch(`${baseURL}/photos?per_page=30`, {
+    console.log("process",process);
+    const res = await fetch(`${baseURL}/photos?per_page=30`,{
       headers: {
         Authorization: `Client-ID ${API_KEY}`,
       },

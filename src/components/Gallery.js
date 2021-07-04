@@ -45,9 +45,9 @@ const Gallery = ({ query }) => {
         <img className="img-preview" src={currentImg} alt="image preview" />
       </Modal>
 
-      {imgList.length === 0 ? <h2>No images found</h2> : null}
+      {imgList?.length === 0 ? <h2>No images found</h2> : null}
       <Masonry className="grid-container" options={{ isFitWidth: true }}>
-        {imgList.map((img) => {
+        {imgList?.map((img) => {
           return (
             <Image
               urls={img.urls}
